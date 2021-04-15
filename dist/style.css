@@ -1,0 +1,24 @@
+.kitty {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  width: 200px;
+  margin: 20px;
+  border-style: solid;
+  border-radius: 15px;
+  background-color: blanchedalmond;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.kitty img {
+  height: 100px;
+  width: 100px;
+}
+
+#kittyBox {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}

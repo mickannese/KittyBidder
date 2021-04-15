@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Here are the kitties</h1>
+  <div id="app">
+    <form v-on:submit.prevent="addKitty">
+      <label for="add-kitty">Kitty Name</label>
+      <input type="text" id="add-kitty" v-model.trim="boxName">
+      <button type="submit">Add Kitty</button>
+    </form>
+    <div id="kittyBox">
+      <kitty v-for="item in Object.keys(collection)" :name="item" :exp="collection[item]"></kitty>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="main.js"></script>
+</body>
